@@ -1,17 +1,34 @@
 /* javascript for chatter app interface */
 import "./App.css";
+import TextInput from "./TextInput";
+import { useState } from "react";
+import Message from "./Message";
 
 function App() {
-  return <div className="App">
-    <header className="header">
-      <img className="logo"/>
-      <span className="title">CHATTER!</span>
-    </header>
-    <footer className="footer">
-        <input className="text-input" />
-        <button className="send">↑</button>
-      </footer>
-  </div>;
+  const [messages, setMessages] = useState([]);
+  function sendMessage(text) {
+    const newMessage = {
+      text,
+      time: Date.now(),
+      user: "Alida"
+    };
+    setMessages([newMessage, ...messages]);
+  }
+  console.log(messages);
+  return (
+    <div className="App">
+      <header className="header">
+        <div className="logo"/>
+        <span className="title">CHATTER!</span>
+      </header>
+      <div className="messages">
+        {messages.map((msg) => {
+        return <Message {...msg} />;
+      })}
+    </div>
+    <TextInput sendMessage={sendMessage} />
+  </div>
+  );
 }
 
 export default App;
