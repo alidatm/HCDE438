@@ -1,7 +1,7 @@
 import React from "react";
 import "./TextInput.css";
 import { useState } from "react";
-import { FiSend, FiCamera } from 'react-icons/fi';
+import { FiSend} from 'react-icons/fi';
 
 
 function TextInput(props) {

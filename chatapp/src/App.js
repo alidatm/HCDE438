@@ -1,11 +1,10 @@
 /* javascript for chatter app interface */
 import "./App.css";
 import TextInput from "./TextInput";
-import { useState } from "react";
+import React, { useState } from "react";
 import Message from "./Message";
-import React from 'react';
-// import Camera from 'react-snap-pic'
 import { use100vh } from "react-div-100vh";
+// import Camera from 'react-snap-pic'
 import NamePicker from "./NamePicker";
 import { useDB, db } from "./db";
 
