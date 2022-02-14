@@ -1,4 +1,3 @@
-import React from'react';
 import { useState } from "react";
 import { FiEdit } from "react-icons/fi";
 

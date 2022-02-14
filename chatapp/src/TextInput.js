@@ -1,4 +1,3 @@
-import React from "react";
 import "./TextInput.css";
 import { useState } from "react";
 import { FiSend} from 'react-icons/fi';
@@ -30,7 +29,6 @@ function TextInput(props) {
     </button>
   </footer>
 );
-
 
 
   //   <footer className="footer">
